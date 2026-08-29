@@ -1,17 +1,20 @@
-name: Checkout Practice
+name: Variables Practice
 
 on:
   push:
     branches:
       - main
 
+env:
+  MY_NAME: Vinod
+  ENVIRONMENT: DEV
+
 jobs:
-  checkout:
+  variables:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Show files
-        run: ls -la
+      - name: Show variables
+        run: |
+          echo "My name is $MY_NAME"
+          echo "Environment is $ENVIRONMENT"
