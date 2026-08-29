@@ -1,4 +1,4 @@
-name: My Second GitHub Action
+name: Checkout Practice
 
 on:
   push:
@@ -6,12 +6,12 @@ on:
       - main
 
 jobs:
-  practice:
+  checkout:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Step 1
-        run: echo "This is Step 1"
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Step 2
-        run: echo "This is Step 2"
+      - name: Show files
+        run: ls -la
