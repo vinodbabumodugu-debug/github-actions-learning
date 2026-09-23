@@ -19,3 +19,4 @@ jobs:
           echo "My name is $MY_NAME"
           echo "Environment is $ENVIRONMENT"
           echo "App name is ${{ vars.APP_NAME }}"
+# Testing GitHub repository variable
